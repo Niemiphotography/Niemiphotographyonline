@@ -1,0 +1,56 @@
+.hero {
+
+    background: url('../DSC00659.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 1s ease-in-out;
+}
+.content > .left {
+    background-color: #121212; /* Dark background */
+    color: rgba(255, 255, 255, 0.703); /* White text color */
+    padding: 20px; /* Reduced padding for smaller box */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; /* Adjust the width */
+    text-align: center;
+    font-size: 18px; /* Adjust the font size */
+}
+
+.left h2 {
+    font-size: 30px; /* Change font size */
+    color: #e67e22; /* Orange color for title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Optional text shadow */
+}
+
+.left p {
+    font-size: 18px; /* Change font size */
+    line-height: 1.6;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Optional text shadow */
+}
+.content > .gear {
+    background-color: #121212; /* Dark background */
+    color: rgba(255, 255, 255, 0.703); /* White text color */
+    padding: 20px; /* Reduced padding for smaller box */
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; /* Adjust the width */
+    text-align: center;
+    font-size: 18px; /* Adjust the font size */
+}
+
+.gear-box h2 {
+    font-size: 50px; /* Change font size */
+    color: #e67e22; /* Orange color for title */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Optional text shadow */
+}
+
+.gear-box p {
+    font-size: 40px; /* Change font size */
+    line-height: 1.6;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Optional text shadow */
+}
+

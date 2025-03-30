@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <style>
+        /* Modal styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+            margin: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f1f1f1;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2></h2>
+    </section>
+    
+    <section class="content">
+        <div class="left">
+            <h2>Kuka minä olen?</h2>
+            <p>Olen Arttu Niemi, Olen intohimoinen valo- ja videokuvaaja, joka tykkää tallentaa hetkiä ja tunnelmia kuviin ja videoihin. Kuvauksen kohteena voivat olla niin yritykset ja brändit kuin myös ihmiset.
+
+                Etsin jatkuvasti uusia projekteja ja mahdollisuuksia kehittyä. Jos kaipaat laadukasta kuva- ja videomateriaalia yrityksellesi tai itsellesi, ota rohkeasti yhteyttä, tehdään yhdessä jotain upeaa! </p>
+        </div>
+
+        <div class="booking">
+            <a href="javascript:void(0);" class="book-button" id="bookButton">Contact</a>
+        </div>
+    </section>
+    
+
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+    
+        <!-- Kuvagalleria -->
+        <div class="portfolio-section">
+            <h3>Kuvat</h3>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item"><img src="DSC00283.jpg" alt="Kuva 1" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00377.jpg" alt="Kuva 2" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00685.jpg" alt="Kuva 3" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00706.jpg" alt="Kuva 4" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00630.jpg" alt="Kuva 6" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00360.jpg" alt="Kuva 5" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00783.jpg" alt="Kuva 6" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00792.jpg" alt="Kuva 7" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00805.jpg" alt="Kuva 8" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00793.jpg" alt="Kuva 8" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00852.jpg" alt="Kuva 8" class="portfolio-img"></div>
+                <div class="portfolio-item"><img src="DSC00847.jpg" alt="Kuva 8" class="portfolio-img"></div>
+            </div>
+        </div>
+    
+        <!-- Video-osio -->
+        <div class="portfolio-section">
+            <h3>Videot</h3>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <video width="100%" height="auto" autoplay loop muted>
+                        <source src="Villa Elba(1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="portfolio-item">
+                    <video width="100%" height="auto" autoplay loop muted>
+                        <source src="Board.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="portfolio-item">
+                    <video width="100%" height="auto" autoplay loop muted>
+                        <source src="Joutsenia.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image -->
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Larger Image">
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer id="footer">
+        <h2>Contact</h2>
+        <p>Email: auniemi20@gmail.com</p>
+        <p>Phone: 0456958600</p>
+        <p>Instagram: <a href="https://www.instagram.com/auniemi" target="_blank">@auniemi</a></p>
+    </footer>
+    </footer>
+
+    <script>
+        // Get all images in the portfolio
+        let portfolioImages = document.querySelectorAll('.portfolio-img');
+
+        // Get modal elements
+        let modal = document.getElementById('imageModal');
+        let modalImage = document.getElementById('modalImage');
+        let closeModal = document.getElementById('closeModal');
+
+        // Open modal when image is clicked
+        portfolioImages.forEach(image => {
+            image.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImage.src = image.src; // Set the modal image source to the clicked image's source
+            });
+        });
+
+        // Close modal when "close" button is clicked
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close modal if clicked outside the image
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
