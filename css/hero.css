@@ -7,7 +7,7 @@
     justify-content: center;
     transition: background-image 1s ease-in-out;
 }
-.hero h1 {
+.hero h2 {
     opacity: 0; /* Muuta arvoa välillä 0.0 (täysin läpinäkyvä) - 1.0 (täysin näkyvä) */
 }
 .content > .left {
