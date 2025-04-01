@@ -7,9 +7,6 @@
     justify-content: center;
     transition: background-image 1s ease-in-out;
 }
-.hero h2 {
-    opacity: 0; /* Muuta arvoa välillä 0.0 (täysin läpinäkyvä) - 1.0 (täysin näkyvä) */
-}
 .content > .left {
     background-color: #121212; /* Dark background */
     color: rgba(255, 255, 255, 0.703); /* White text color */
