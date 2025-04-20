@@ -55,3 +55,10 @@
         transform: none;
     }
 }
+.about-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
