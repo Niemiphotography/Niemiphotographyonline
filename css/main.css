@@ -1,0 +1,43 @@
+body {
+    background-color: #e2e2e2;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 768px) {
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero {
+        height: 300px;
+    }
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Fonts/Teko-Regular-BF64489c9c19e54.ttf') format('truetype'); /* Adjust the path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MyCustomFont2';
+    src: url('Fonts/Finalnew.ttf') format('truetype'); /* Adjust the path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+
